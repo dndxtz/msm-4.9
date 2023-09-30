@@ -3692,6 +3692,11 @@ CONFIG_PRONTO_WLAN=y
 # CONFIG_CHROME_PLATFORMS is not set
 
 #
+# KernelSU
+#
+CONFIG_KSU=y
+
+#
 # Qualcomm technologies inc. MSM specific device drivers
 #
 CONFIG_IPA=y
