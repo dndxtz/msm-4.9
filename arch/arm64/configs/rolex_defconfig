@@ -624,6 +624,7 @@ CONFIG_CPU_FREQ_GOV_USERSPACE=y
 CONFIG_CPU_FREQ_GOV_ONDEMAND=y
 # CONFIG_CPU_FREQ_GOV_INTERACTIVE is not set
 CONFIG_CPU_FREQ_GOV_CONSERVATIVE=y
+# CONFIG_CPU_BOOST is not set
 CONFIG_CPU_FREQ_GOV_SCHEDUTIL=y
 
 #
@@ -3692,11 +3693,6 @@ CONFIG_PRONTO_WLAN=y
 # CONFIG_CHROME_PLATFORMS is not set
 
 #
-# KernelSU
-#
-CONFIG_KSU=y
-
-#
 # Qualcomm technologies inc. MSM specific device drivers
 #
 CONFIG_IPA=y
@@ -4254,6 +4250,12 @@ CONFIG_NVMEM_SPMI_SDAM=y
 # CONFIG_FPGA is not set
 CONFIG_SENSORS_SSC=y
 # CONFIG_TEE is not set
+
+#
+# KernelSU
+#
+CONFIG_KSU=y
+# CONFIG_KSU_DEBUG is not set
 
 #
 # Firmware Drivers
