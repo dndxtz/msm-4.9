@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
-git clone --depth=1 https://github.com/dndxtz/AnyKernel3 -b aosp AnyKernel
+git clone --depth=1 https://github.com/dndxtz/AnyKernel3 -b uclamp AnyKernel
 echo "Done"
 tanggal=$(TZ=Asia/Jakarta date "+%Y%m%d-%H%M")
 ZIP_NAME="Fate-4.9-Rolex-${tanggal}.zip"
