@@ -47,7 +47,7 @@ function finerr() {
 }
 # Compile plox
 function compile() {
-    make O=out ARCH=arm64 rolex_defconfig
+    make O=out ARCH=arm64 msm8937_defconfig
     make -j$(nproc --all) O=out \
                     ARCH=arm64 \
                     CC=clang \
