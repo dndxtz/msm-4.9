@@ -6,7 +6,7 @@ echo "Done"
 tanggal=$(TZ=Asia/Jakarta date "+%Y%m%d-%H%M")
 ZIP_NAME="Fate-4.9-Rolex-${tanggal}.zip"
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
-DTB=$(pwd)/arch/arm64/boot
+DTB=$(pwd)/out/arch/arm64/boot
 TANGGAL=$(date +"%F-%S")
 START=$(date +"%s")
 chat_id=-1001944300223
@@ -65,8 +65,6 @@ function compile() {
         finerr
         exit 1
     fi
-    cd AnyKernel
-    mkdir dtbs
     mv out/arch/arm64/boot/dts/xiaomi-msm8937/*dtb AnyKernel/dtbs
 }
 # Zipping
