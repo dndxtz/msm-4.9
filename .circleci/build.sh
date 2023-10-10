@@ -5,7 +5,7 @@ git clone --depth=1 https://github.com/dndxtz/AnyKernel3 -b aosp AnyKernel
 echo "Done"
 tanggal=$(TZ=Asia/Jakarta date "+%Y%m%d-%H%M")
 ZIP_NAME="Fate-4.9-Rolex-${tanggal}.zip"
-IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
+IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
 DTB=$(pwd)/out/arch/arm64/boot
 TANGGAL=$(date +"%F-%S")
 START=$(date +"%s")
@@ -48,7 +48,7 @@ function finerr() {
 }
 # Compile plox
 function compile() {
-    make O=out ARCH=arm64 rolex_defconfig
+    make O=out ARCH=arm64 mi8937_defconfig
     make -j$(nproc --all) O=out \
                     ARCH=arm64 \
                     CC=clang \
@@ -59,7 +59,7 @@ function compile() {
         finerr
         exit 1
     fi
-    cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
+    cp out/arch/arm64/boot/Image.gz AnyKernel
 
     if ! [ -a "$DTB" ]; then
         finerr
